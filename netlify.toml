@@ -1,0 +1,14 @@
+[build]
+  publish = "."
+  command = "echo ready"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "no-cache"
+    X-Frame-Options = "DENY"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
